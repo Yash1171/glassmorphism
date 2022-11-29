@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Testing</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+    <div class="container">
+        <label for="Link">Link:</label>
+        <input type="text" id="Link" name="Link" placeholder="https://www.example.com" maxlength="25">
+        <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+        <div class="popup" id="popup">
+            <img src="media/tick.png">
+            <h2>Great!</h2>
+            <p>Your link is safe</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+<script>
+let popup = document.getElementById("popup");
+        
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");  
+}        
+  
+</script>
+</body>
+</html>
